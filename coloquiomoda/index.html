@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" href="images/favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>13º Colóquio de Moda</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" id="pagesheet"/>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="logo_novo" style="margin-left:35px;"><a href="index.html"><img src="images/flor com edição internacional.png" width="100%" /></a></div>
+<div class="topo">
+  <header class="main-header"> <a href="#"></a>
+    <ul class="menu"> <!-- Esse é o 1 nivel ou o nivel principal -->
+    <li><a href="datas.html">DATAS <br />IMPORTANTES</a></li>
+    <li><a href="programacao.html">PROGRAMAÇÃO</a></li>
+    <li><a href="editais.html">EDITAIS</a></li>
+    <li><a href="inscricoes.html">INSCRIÇÃO</a>
+    <ul class="submenu-1"> <!-- Esse é o 2 nivel ou o primeiro Drop Down -->
+            <li><a href="nao-associado.html">Não Associado</a></li>
+            <li><a href="abepem.html">Abepem</a></li>
+
+        </ul>
+    </li>
+    <li><a href="submissao.html">SUBMISSÃO</a>
+    <ul class="submenu-1"> <!-- Esse é o 2 nivel ou o primeiro Drop Down -->
+            <li><a href="ic.html">Iniciação Científica</a></li>
+            <li><a href="co.html">Comunicação Oral</a></li>
+            <li><a href="gt.html">Grupos de Trabalho</a></li>
+        </ul>
+    </li>
+    <li><a href="cc.html">COMITÊ <br />CIENTÍFICO</a>
+    <ul class="submenu-1"> <!-- Esse é o 2 nivel ou o primeiro Drop Down -->
+            <li><a href="coloquio.html">Colóquio de Moda</a></li>
+            <li><a href="iniciacao.html">Iniciação Científica</a></li>
+
+        </ul>
+    </li>
+    <li><a href="evento.html">EVENTO</a>
+    <ul class="submenu-1"> <!-- Esse é o 2 nivel ou o primeiro Drop Down -->
+            <li><a href="presidencia.html">Presidência</a></li>
+            <li><a href="historico.html">Histórico</a></li>
+            <li><a href="organizacao.html">Organização</a></li>
+            <li><a href="anais.html">Anais</a></li>
+            <li><a href="revista.html">Revista dObra[s]</a></li>
+            
+        </ul>
+    </li>
+    <li><a href="concursos.html">CONCURSOS</a></li>
+    <li><a href="local.html">LOCAL</a></li>
+
+</ul>
+  </header>
+</div>
+<br clear="all" />
+<br clear="all" />
+<br clear="all" />
+<center>
+  <table width="100" border="0">
+    <tr>
+      <td><a href="http://www.abepem.com.br" target="_blank"><img src="images/abepem preto.png" /></a></td>
+      <td><img src="images/u13452-4.png" /><br />
+        <img src="images/u48843-4.png" /></td>
+      <td><img src="images/unesp pt.png" width="188"/></td>
+    </tr>
+  </table>
+</center>
+<figure> <span class="trs next"></span> <span class="trs prev"></span>
+  <div id="slider"> <a href="editais.html" class="trs"><img src="images/mudanças site-01.png" width="100%" alt="" /></a> <a href="programacao.html" class="trs"><img src="images/mudanças site-05.png" width="100%" alt="" /></a> <a href="https://www.facebook.com/Colóquio-de-Moda-285057383491/?fref=ts" target="_blank" class="trs"><img src="images/mudanças site-08.png" width="100%" alt="" /></a> <a href="https://www.instagram.com/coloquiodemodaoficial/" target="_blank" class="trs"><img src="images/mudanças site-09.png" width="100%" alt="" /></a> </div>
+  <figcaption></figcaption>
+</figure>
+<script type="text/javascript">
+		function setaImagem(){
+			var settings = {
+				primeiraImg: function(){
+					elemento = document.querySelector("#slider a:first-child");
+					elemento.classList.add("ativo");
+					this.legenda(elemento);
+				},
+				slide: function(){
+					elemento = document.querySelector(".ativo");
+					if(elemento.nextElementSibling){
+						elemento.nextElementSibling.classList.add("ativo");
+						settings.legenda(elemento.nextElementSibling);
+						elemento.classList.remove("ativo");
+					}else{
+						elemento.classList.remove("ativo");
+						settings.primeiraImg();
+					}
+				},
+				proximo: function(){
+					clearInterval(intervalo);
+					elemento = document.querySelector(".ativo");
+					
+					if(elemento.nextElementSibling){
+						elemento.nextElementSibling.classList.add("ativo");
+						settings.legenda(elemento.nextElementSibling);
+						elemento.classList.remove("ativo");
+					}else{
+						elemento.classList.remove("ativo");
+						settings.primeiraImg();
+					}
+					intervalo = setInterval(settings.slide,4000);
+				},
+				anterior: function(){
+					clearInterval(intervalo);
+					elemento = document.querySelector(".ativo");
+					
+					if(elemento.previousElementSibling){
+						elemento.previousElementSibling.classList.add("ativo");
+						settings.legenda(elemento.previousElementSibling);
+						elemento.classList.remove("ativo");
+					}else{
+						elemento.classList.remove("ativo");						
+						elemento = document.querySelector("a:last-child");
+						elemento.classList.add("ativo");
+						this.legenda(elemento);
+					}
+					intervalo = setInterval(settings.slide,4000);
+				},
+				legenda: function(obj){
+					var legenda = obj.querySelector("img").getAttribute("alt");
+					document.querySelector("figcaption").innerHTML = legenda;
+				}
+			}
+			//chama o slide
+			settings.primeiraImg();
+			//chama a legenda
+			settings.legenda(elemento);
+			//chama o slide à um determinado tempo
+			var intervalo = setInterval(settings.slide,4000);
+			document.querySelector(".next").addEventListener("click",settings.proximo,false);
+			document.querySelector(".prev").addEventListener("click",settings.anterior,false);
+		}
+		window.addEventListener("load",setaImagem,false);
+	</script> 
+<br clear="all" />
+<center>
+  <table width="100" border="0">
+    <tr>
+      <td><a href="http://ggili.com.br" target="_blank"><img src="images/GGBrasil.png" width="120" /></a></td>
+      <td style="padding-left:30px;"><a href="http://rpjr.com.br" target="_blank"><img src="images/RpJr.png" width="100"/></a></td>
+      <td style="padding-left:30px;"><a href="http://www.jornaljr.com.br" target="_blank"><img src="images/Jornal Jr.png" width="100"/></a></td>
+      <td style="padding-left:30px;"><a href="http://compjr.com.br" target="_blank"><img src="images/jrcom.png" width="100"/></a></td>
+      <td style="padding-left:30px;"><img src="images/locomotiva.png" width="100"/></td>
+    </tr>
+  </table>
+</center>
+<br clear="all" />
+<br clear="all" />
+<br clear="all" />
+<div class="laranja">
+  <h3>O COLÓQUIO DE MODA</h3>
+  <p>O <strong>13º Colóquio de Moda</strong> em sua <strong>10ª edição Internacional</strong> é um congresso científico que congrega o <strong>12º Fórum das Escolas de Moda Dorotéia Baduy Pires</strong> e o <strong>IV Congresso de Iniciação Científica em Design e Moda</strong>. O evento tem como principal objetivo promover a troca de conhecimentos a respeito do estado da arte, da ciência e da tecnologia desenvolvidas por meio da produção científica nacional e internacional no campo da Moda e em suas inter-relações.</p>
+  <p><a href="evento.html"><strong>SAIBA MAIS</strong></a></p>
+  <br clear="all" /><br clear="all" />
+</div>
+<div class="branco">
+  <h3>13º EDIÇÃO</h3>
+  <p>Organização do evento:</p>
+  <p><strong>Abepem</strong> – Associação Brasileira de Estudos e Pesquisas em Moda</p>
+  <p><strong>UNESP</strong>, Campus de Bauru</p>
+    <p><a href="organizacao.html"><strong>SAIBA MAIS</strong></a></p><br clear="all" /><br clear="all" />
+</div>
+<div class="rosa">
+  <h3>PRESIDÊNCIAS</h3>
+  <table width="100%" border="0">
+    <tr>
+      <td><p><strong>Abepem</strong></p>
+        <p>Presidente: Profa. Dra. Kathia Castilho</p>
+        <p>Vice-presidente: Profa. Dra. Maria de Fátima Mattos</p>
+        <p><strong>Colóquio de Moda</strong></p>
+        <p>Presidente: Profa. Dra. Cynthia Tavares</p>
+        <p>Vice-presidente: Profa. Dra. Mônica Moura</p>
+        <p><strong>Fórum das Escolas de Moda</strong></p>
+        <p>Presidente: Profa. Dra. Maria de Fátima Mattos</p>
+        <p>Vice-presidente: Profa. Dra. Mara Rubia Sant'Anna</p></td>
+      <td><p><strong>Comitê Organizador</strong></p>
+        <p>Presidente: Profa. Dra. Mônica Moura</p>
+        <p>Vice-presidente: Prof. Dr. Claudio Roberto Y Goya</p>
+        <p><strong>Comitê Científico do Colóquio de Moda</strong></p>
+        <p>Presidente: Profa. Dra. Paula da Cruz Landim</p>
+        <p>Vice-presidente: Profa. Dra. Marizilda dos Santos Menezes</p>
+        <p><strong>Comitê Científico de Iniciação Científica</strong></p>
+        <p>Presidente: Prof. Dr. Marcelo Martins</p>
+        <p>Vice-Presidente: Profa. Dra. Taísa Vieira Sena</p>
+        </td>
+    </tr>
+  </table>
+    <p><a href="presidencia.html"><strong>SAIBA MAIS</strong></a></p><br clear="all" /><br clear="all" />
+</div>
+<div class="branco">
+  <h3>COMO CHEGAR</h3>
+  <p>INFORMAÇÕES RESUMO SOBRE TRANSPORTES, HOSPEDAGEM E AGÊNCIA</p>
+    <p><a href="local.html"><strong>SAIBA MAIS</strong></a></p><br clear="all" /><br clear="all" />
+</div>
+<footer class="laranja">
+  <table width="100%" border="0">
+    <tr>
+      <td style="width:50%"><center>
+          <h3 style="color:#DB2373">Realização</h3>
+        </center>
+        <center>
+          <img src="images/abepem.png" /><img src="images/unesp bc.png" width="200px;" style="padding-left:40px;">
+        </center>
+        <center>
+          <h3 style="color:#DB2373">Apoio</h3>
+        </center>
+        <center>
+          <img src="images/faac logo.png" width="10%;"/><img src="images/dp.png" width="17%;" style="padding-left:40px;"/><img src="images/pós branco.png" width="17%;" style="padding-left:40px;"/><img src="images/lab d.png" width="17%;" style="padding-left:40px;"/><img src="images/labsol.png" width="17%;" style="padding-left:40px;"/>
+        </center></td>
+      <td><h3 style="color:#DB2373">Newsletter</h3>
+        <p style="color:#DB2373"><em>Deseja receber o Newsletter do 13º Colóquio de Moda?</em></p>
+        <h3 style="color:#DB2373">EMAIL:</h3>
+        <input type="text" name="email" style="    border: #DB2373;
+    border-style: groove;
+    border-width: 3px;
+    margin-top: -21px;
+    width: 300px;
+    height: 30px;"/>
+        <br />
+        <input type="submit" name="envia" value="Cadastre-se" style="background-color: #FCC103;
+    width: 150px;
+    height: 30px;
+    border-color: #DB2373;
+    color: #FFF;
+    margin-top: 5px;"/>
+        <table width="100%" border="0">
+          <tr>
+            <td><strong>
+              <p style="color:#FFF">Entre em contato com <br />
+                <a href="mailto:contato@coloquiodemoda.com.br" style="color:#FFF; float:left;">contato@coloquiodemoda.com.br</a></p>
+              </strong></td>
+            <td><a href="https://www.facebook.com/Colóquio-de-Moda-285057383491/?fref=ts" target="_blank"><img src="images/fb branco.png" /></a><a href="https://www.instagram.com/coloquiodemodaoficial/" target="_blank"><img src="images/ig branco.png" style="padding-left:30px;"/></a></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+</footer>
+</body>
+</html>
