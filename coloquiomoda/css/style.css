@@ -190,22 +190,32 @@ figcaption {
 	padding-left:50px;
 }
 
-div.laranja table, div.rosa table, div.branco table{margin-left: 6.5%;margin-right: 6.5%;}
-div.laranja p, div.rosa p, div.branco p{margin-left: 13%;margin-right: 13%}
-div.laranja h3, div.rosa h3, div.branco h3{margin-left: 13%;margin-right: 13%;}
+/*cuida do alinhamento do conteúdo*/
+table{margin-left: 6.5%;margin-right: 6.5%;}
+p{margin-left: 13%;margin-right: 13%}
+h3{margin-left: 13%;margin-right: 13%;}
+
+/*para imagens centralizadas*/
+img.centro-img{
+	display:block;
+	margin: 0 auto;
+}
 
 a {
-	color:#000;
+	text-decoration: none;
+	color:#333;
 	float:right;
 }
 
-a:hover {
-	color:#000;
+a:visited {
+	color:#428bca;
 }
 
-a:visited {
-	color:#000;
+a:hover {
+	color:#AAA;
 }
+
+
 
 p {
 	font-size:18px;
