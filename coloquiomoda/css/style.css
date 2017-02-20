@@ -54,12 +54,12 @@ ul.menu{ float:left; font-family:Verdana, Geneva, sans-serif; font-size:13px; bo
 /*nivel 1*/
 .menu{background:#FFF; color:#DB2373; }
 .menu a{ color:#DB2373 !important;}
-.menu li:hover > a{ background:#FFF;  color:#DB2373;}
+.menu li:hover > a{ background:#EEE;  color:#DB2373;}
 
 /*nivel 2*/
 .submenu-1{ background:#FFF;}
 .submenu-1 a{color:#DB2373;}
-.submenu-1 li:hover > a{ background:#FFF; }
+.submenu-1 li:hover > a{ background:#EEE;}
 .fl_left {
 	float: left;
 }
@@ -189,6 +189,10 @@ figcaption {
 	padding-bottom:20px;
 	padding-left:50px;
 }
+
+div.laranja table, div.rosa table, div.branco table{margin-left: 6.5%;margin-right: 6.5%;}
+div.laranja p, div.rosa p, div.branco p{margin-left: 13%;margin-right: 13%}
+div.laranja h3, div.rosa h3, div.branco h3{margin-left: 13%;margin-right: 13%;}
 
 a {
 	color:#000;
